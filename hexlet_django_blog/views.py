@@ -13,8 +13,3 @@ class HomePageView(TemplateView):
 
 def about(request):
     return render(request, 'about.html')
-
-
-class Index(TemplateView):
-    def get(self, request):
-        return redirect(reverse('article', kwargs = {'tags': 'python', 'article_id': 42}))

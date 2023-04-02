@@ -1,1 +1,8 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block content %}
 <h1>Hello, {{ who }}!</h1>
+<p>Это мой тестовый блок Джанго</p>
+{% endblock %}
