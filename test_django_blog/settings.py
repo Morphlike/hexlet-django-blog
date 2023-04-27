@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hexlet_django_blog',
-    'hexlet_django_blog.article',
+    'test_django_blog',
+    'test_django_blog.article',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'hexlet_django_blog.urls'
+ROOT_URLCONF = 'test_django_blog.urls'
 
 TEMPLATES = [
     {
@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'hexlet_django_blog.wsgi.application'
+WSGI_APPLICATION = 'test_django_blog.wsgi.application'
 
 
 # Password validation

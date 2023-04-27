@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hexlet_django_blog.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'test_django_blog.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

@@ -1,4 +1,4 @@
-"""hexlet_django_blog URL Configuration
+"""test_django_blog URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from hexlet_django_blog.views import HomePageView
-from hexlet_django_blog import views
+from test_django_blog.views import HomePageView
+from test_django_blog import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomePageView.as_view()),
     path('about/', views.about),
-    path('article/', include('hexlet_django_blog.article.urls')),
+    path('article/', include('test_django_blog.article.urls')),
 ]

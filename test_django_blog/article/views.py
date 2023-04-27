@@ -4,7 +4,7 @@ from django.forms import ModelForm
 from django.contrib import messages
 
 from .models import Article
-from .forms import ArticleForm
+from .forms import ArticleForm, ArticleCommentForm
 
 
 class IndexView(View):
@@ -38,6 +38,20 @@ class ArticleFormCreateView(View):
             messages.success(request, 'The article has been added!')
             return redirect('articles')
         return render(request, 'article/create.html', {'form': form})
+
+
+class ArticleCommentFormView(View):
+
+    def get(self, request, *args, **kwargs):
+        form = ArticleCommentForm()
+        return render(request, 'article/comment.html', {'form': form})
+    
+    def post(self, request, *args, **kwargs):
+        form = ArticleCommentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('articles')
+        return render(request, 'article/comment.html', {'form': form})
 
 
 class ArticleFormEditView(View):
